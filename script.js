@@ -214,7 +214,6 @@ document.querySelectorAll(".wish-btn").forEach(btn => {
 });
 
 /* 3. event page*/
-
 /* 3.1 open registration*/
 function openRegister(eventName) {
     document.getElementById("selectedEvent").value = eventName;
@@ -273,8 +272,7 @@ function filterCategory(category, button) {
 }
 
 /* ့home page*/
-
-/* 4.1 Welcome Discount */
+/*4.1 Welcome Discount */
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
 
@@ -285,15 +283,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Swiper
     if (document.querySelector(".coffee-slider")) {
         new Swiper(".coffee-slider", {
+
             loop: true,
-            speed: 1000,
+
+            speed: 1200,
+
             autoplay: {
-                delay: 3500,
-                disableOnInteraction: false
+                delay: 4000,
+                disableOnInteraction: false,
             },
+
             pagination: {
                 el: ".swiper-pagination",
-                clickable: true
+                clickable: true,
             }
         });
     }
@@ -339,7 +341,6 @@ function subscribe() {
 }
 
 /*4.5 about our story*/
-
 document.addEventListener("DOMContentLoaded", function () {
     const aboutImage = document.querySelector(".about-image");
     if (!aboutImage) return;
@@ -466,4 +467,41 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+});
+
+
+
+/* OFFER PAGE MOTION */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const offerElements = document.querySelectorAll(
+        ".offer-header, .offer-card, .discount-card, .latte, .reward-left, .reward-item, .plan-card, .benefit-card"
+    );
+
+
+    const offerObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
+            if(entry.isIntersecting){
+
+                setTimeout(() => {
+                    entry.target.classList.add("offer-show");
+                }, index * 100);
+
+                offerObserver.unobserve(entry.target);
+            }
+
+        });
+
+    },{
+        threshold:0.15
+    });
+
+
+
+    offerElements.forEach(element=>{
+        offerObserver.observe(element);
+    });
+
 });
