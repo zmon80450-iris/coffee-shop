@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Feimage/logo.png" alt="Bean Boutique Logo">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Our Coffee</a></li>
+                <li><a href="equipment.html"> Equipment</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="offer.html">Special Offers</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="menu" id="mobileMenu">
+                    <i class="bi bi-list"></i>
+                </div>
+                <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="order-btn">ORDER ONLINE</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cart-page">
+        <div class="nav-links">
+            <a href="coffee.html">← Back to Product</a>
+        </div>
+        <h1>Shopping Cart</h1>
+
+        <div class="cart-container">
+            <div class="cart-items" id="cart-wrapper">
+            </div>
+
+            <div class="summary">
+                <h2>Order Summary</h2>
+                <div class="row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="row">
+                    <span>Shipping</span>
+                    <span id="cart-shipping">$5.00</span>
+                </div>
+                <div class="row">
+                    <span>Tax</span>
+                    <span id="cart-tax">$3.00</span>
+                </div>
+                <hr>
+                <div class="row total">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="checkout">Proceed to Checkout</button>
+                <button class="continue" onclick="window.location.href='coffee.html'">Continue Shopping</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box brand">
+                <h2>Bean Boutique</h2>
+                <span class="sub-brand">— COFFEE —</span>
+                <p>Great coffee, great moments. Join our community and enjoy special coffee experiences.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                    <a href="#"><i class="bi bi-envelope-heart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box links">
+                <h3>QUICK LINKS</h3>
+                <a href="index.html">&gt;Home</a>
+                <a href="coffee.html">&gt;Menu</a>
+                <a href="Event.html">&gt;Events</a>
+                <a href="#">&gt;Our Story</a>
+            </div>
+
+            <div class="footer-box contact">
+                <h3>CONTACT</h3>
+                <p><i class="bi bi-envelope"></i> info@beancoffee.com</p>
+                <p><i class="bi bi-telephone"></i> +95 123 456 789</p>
+                <p><i class="bi bi-clock"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+            </div>
+
+            <div class="footer-map-column">
+                <h3><i class="bi bi-geo-alt-fill"></i> VISIT US:</h3>
+
+                <p class="address-details">
+                    Mingalar Mandalay,<br>
+                    73rd Street, Mandalay, Myanmar
+                </p>
+
+                <div class="compact-map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.4026728571282!2d96.09238749999996!3d21.94203345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d66c3ab9601%3A0xb6670a540e325a17!2sMingalar%20Mandalay%2C%2073rd%20St%2C%20Mandalay!5e0!3m2!1sen!2smm!4v1783263480122!5m2!1sen!2smm"
+                        loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+
+                <a href="https://maps.app.goo.gl/c1F3dcm4ns4K31Gj8" target="_blank" rel="noopener noreferrer"
+                    class="maps-link-btn">
+                    Open in Google Maps
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="footer-subscribe">
+                <div class="subscribe-text">
+                    <div class="coffee-image">
+                        <img src="Feimage/offer/cup.png" alt="">
+                    </div>
+                    <div class="scribe-text">
+                        <h2>Never Miss a Deal</h2>
+                        <p>Subscribe to get the latest offers and news delivered to your inbox.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-divider-line">
+                <i class="bi bi-cup-hot-fill divider-coffee-icon"></i>
+            </div>
+            <p>© 2026 Bean Boutique Coffee. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartWrapper = document.getElementById('cart-wrapper');
+            const subtotalContainer = document.getElementById('cart-subtotal');
+            const totalContainer = document.getElementById('cart-total');
+
+            // Fixed values for shipping and tax
+            const shippingCost = 5.00;
+            const taxCost = 3.00;
+
+            function renderCart() {
+                let cart = JSON.parse(localStorage.getItem('productCart')) || [];
+                cartWrapper.innerHTML = '';
+
+                if (cart.length === 0) {
+                    cartWrapper.innerHTML = '<p style="text-align:center; padding: 20px;">Your cart is empty.</p>';
+                    subtotalContainer.innerText = '$0.00';
+                    totalContainer.innerText = '$0.00';
+                    return;
+                }
+
+                let grandSubtotal = 0;
+
+                cart.forEach((item, index) => {
+                    const numericalPrice = Number(item.price.toString().replace(/[^0-9.]/g, '')); const itemTotal = numericalPrice * item.quantity;
+                    grandSubtotal += itemTotal;
+
+                    const itemCard = document.createElement('div');
+                    itemCard.className = 'cart-card';
+                    itemCard.innerHTML = `
+                <img src="${item.imgSrc || item.image || 'Feimage/yirgacheffe.jpg'}" alt="${item.title}">
+
+                <div class="details">
+                    <h3>${item.title}</h3>
+                    <p>${item.description || 'Premium roasted coffee blend.'}</p>
+                    <div class="price">$${numericalPrice.toFixed(2)}</div>
+
+                    <div class="quantity">
+                        <button class="dec-btn" data-index="${index}">-</button>
+                        <span>${item.quantity}</span>
+                        <button class="inc-btn" data-index="${index}">+</button>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <h3>$${itemTotal.toFixed(2)}</h3>
+                    <i class="fa-solid fa-trash remove-btn" data-index="${index}" style="cursor:pointer;"></i>
+                </div>
+            `;
+                    cartWrapper.appendChild(itemCard);
+                });
+
+                const grandTotal = grandSubtotal + shippingCost + taxCost;
+                subtotalContainer.innerText = `$${grandSubtotal.toFixed(2)}`;
+                totalContainer.innerText = `$${grandTotal.toFixed(2)}`;
+            }
+
+            function updateCartState(updatedCart) {
+                localStorage.setItem('productCart', JSON.stringify(updatedCart));
+                renderCart();
+            }
+
+            // Click Event Listener (Plus, Minus, Delete)
+            cartWrapper.addEventListener('click', function (e) {
+                const indexAttr = e.target.getAttribute('data-index');
+                if (indexAttr === null) return;
+
+                let cart = JSON.parse(localStorage.getItem('productCart')) || [];
+                const index = parseInt(indexAttr, 10);
+
+                if (e.target.classList.contains('dec-btn')) {
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity -= 1;
+                    } else {
+                        cart.splice(index, 1); // ၁ ခုပဲရှိတော့ရင် အပြီးဖျက်မည်
+                    }
+                    updateCartState(cart);
+                    return;
+                }
+
+                if (e.target.classList.contains('inc-btn')) {
+                    cart[index].quantity += 1;
+                    updateCartState(cart);
+                    return;
+                }
+
+                if (e.target.classList.contains('remove-btn')) {
+                    cart.splice(index, 1);
+                    updateCartState(cart);
+                    return;
+                }
+            });
+            renderCart();
+        });
+    </script>
+</body>
+
+</html>

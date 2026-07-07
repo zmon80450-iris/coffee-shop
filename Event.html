@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Workshops - Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Feimage/logo.png" alt="Bean Boutique Logo">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Our Coffee</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="Event.html" class="active">Events</a></li>
+                <li><a href="offer.html">Special Offers</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="menu" id="mobileMenu">
+                    <i class="bi bi-list" onclick="toggleMenu()"></i>
+                </div>
+                <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="order-btn">ORDER ONLINE</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider">
+            <div class="main">
+
+                <div class="e_overlay"></div>
+
+                <div class="content">
+                    <span>Connect. Learn. Enjoy.</span>
+                    <h1>Events & Workshops</h1>
+                    <p>Great coffee brings people together. Join our hands-on events and master the art of brewing.</p>
+                    <a href="#workshops" class="btn">Explore All Events</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <h2>Find Events</h2>
+            <div class="search-container">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" id="eventSearch" placeholder="Search workshops (e.g., Latte Art, Brewing)..."
+                    onkeyup="searchEvents()">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterCategory('all', this)">All Events</button>
+                <button class="filter-btn" onclick="filterCategory('workshop', this)">Workshops</button>
+                <button class="filter-btn" onclick="filterCategory('event', this)">Special Events</button>
+            </div>
+        </section>
+
+        <section class="workshops" id="workshops">
+            <div class="w_title">
+                <p>Learn & Grow</p>
+                <h2>Our Upcoming Schedule</h2>
+                <span>From roasting basics to pouring latte art, select a class that matches your coffee passion.</span>
+            </div>
+
+            <div class="w_grid">
+                <div class="w_card workshop" data-title="latte art class workshop">
+                    <div class="badge">🔥 Popular</div>
+                    <div class="card-image-box">
+                        <img src="Feimage/event/lart.png" alt="Latte Art Class">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta-info">
+                            <span><i class="bi bi-clock"></i> 2 Hours</span>
+                            <span><i class="bi bi-star-fill text-amber"></i> 4.9 (48)</span>
+                        </div>
+                        <h3>Latte Art Class</h3>
+                        <p>Create beautiful designs like rosettas and hearts under expert barista guidance.</p>
+                        <div class="price-seat">
+                            <span class="price">$35</span>
+                            <span class="seats text-danger"><i class="bi bi-exclamation-circle"></i> 3 Seats Left</span>
+                        </div>
+                    </div>
+                    <button class="register-btn" onclick="openRegister('Latte Art Class')">Register Now</button>
+                </div>
+
+                <div class="w_card workshop" data-title="barista training workshop">
+                    <div class="badge">Professional</div>
+                    <div class="card-image-box">
+                        <img src="Feimage/event/btrain.png" alt="Barista Training">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta-info">
+                            <span><i class="bi bi-clock"></i> 4 Hours</span>
+                            <span><i class="bi bi-star-fill text-amber"></i> 5.0 (22)</span>
+                        </div>
+                        <h3>Barista Training</h3>
+                        <p>Master the essentials of dial-in espresso extraction and perfect commercial milk steaming.
+                        </p>
+                        <div class="price-seat">
+                            <span class="price">$60</span>
+                            <span class="seats"><i class="bi bi-check-circle"></i> Available</span>
+                        </div>
+                    </div>
+                    <button class="register-btn" onclick="openRegister('Barista Training')">Register Now</button>
+                </div>
+
+                <div class="w_card event" data-title="acoustic night music event">
+                    <div class="badge special-event">Community</div>
+                    <div class="card-image-box">
+                        <img src="Feimage/event/music.png" alt="Acoustic Night">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta-info">
+                            <span><i class="bi bi-calendar-event"></i> Fri, 28 Jun</span>
+                            <span><i class="bi bi-geo-alt"></i> Main Lounge</span>
+                        </div>
+                        <h3>Acoustic Night</h3>
+                        <p>Unwind with local indie artists, ambient live music, and complimentary house blends.</p>
+                        <div class="price-seat">
+                            <span class="price">Free Entry</span>
+                            <span class="seats"><i class="bi bi-check-circle"></i> RSVP Required</span>
+                        </div>
+                    </div>
+                    <button class="register-btn" onclick="openRegister('Acoustic Night Event')">RSVP Now</button>
+                </div>
+
+                <div class="w_card workshop" data-title="brewing basics workshop">
+                    <div class="badge">Beginner</div>
+                    <div class="card-image-box">
+                        <img src="Feimage/event/bbasic.png" alt="Brewing Basics">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta-info">
+                            <span><i class="bi bi-clock"></i> 1.5 Hours</span>
+                            <span><i class="bi bi-star-fill text-amber"></i> 4.8 (35)</span>
+                        </div>
+                        <h3>Brewing Basics</h3>
+                        <p>Understand variables like grind size and water temperature using V60 Pour-over and Chemex.
+                        </p>
+                        <div class="price-seat">
+                            <span class="price">$25</span>
+                            <span class="seats text-danger"><i class="bi bi-exclamation-circle"></i> 2 Seats Left</span>
+                        </div>
+                    </div>
+                    <button class="register-btn" onclick="openRegister('Brewing Basics')">Register Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h2>500+</h2>
+                    <p>Certified Students</p>
+                </div>
+                <div class="stat-item">
+                    <h2>12+</h2>
+                    <p>Expert Roasters & Baristas</p>
+                </div>
+                <div class="stat-item">
+                    <h2>4.9★</h2>
+                    <p>Average Workshop Rating</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-join-section">
+            <div class="wtitle">
+                <h2>Why Learn With Us?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="f-card">
+                    <i class="bi bi-award"></i>
+                    <h3>Certified Instructors</h3>
+                    <p>Learn directly from SCA-certified baristas with real-world industry experience.</p>
+                </div>
+                <div class="f-card">
+                    <i class="bi bi-cup-straw"></i>
+                    <h3>Premium Fresh Beans</h3>
+                    <p>Practice using high-grade, single-origin Arabica beans roasted freshly in-house.</p>
+                </div>
+                <div class="f-card">
+                    <i class="bi bi-shield-check"></i>
+                    <h3>Small Group Sizes</h3>
+                    <p>Maximum 6 participants per session ensures focused, one-on-one attention.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="host-section">
+            <div class="host-title">
+                <p class="subtitle">Celebrate With Us</p>
+                <h2>Host Your Special Event</h2>
+                <p class="description"> From birthday parties to business meetings, Bean Boutique offers a warm and
+                    stylish space for unforgettable moments. </p>
+            </div>
+            <div class="host-container">
+                <!-- Left Side -->
+                <div class="host-gallery"> <img src="Feimage/event/host.png" alt="Coffee Event">
+                    <div class="gallery-row">
+                        <img src="Feimage/event/hevent.png" alt="Live Music">
+                        <img src="Feimage/event/host1.png" alt="Latte Art">
+                        <img src="Feimage/event/host2.png" alt="Workshop">
+                    </div>
+                </div>
+                <!-- Right Side -->
+                <div class="host-details">
+                    <h3>Perfect For Every Occasion</h3>
+                    <div class="feature-list">
+                        <div class="feature-card"> <i class="bi bi-balloon-heart"></i>
+                            <div>
+                                <h4>Birthday Parties</h4>
+                                <p>Celebrate your special day with delicious coffee and desserts.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card"> <i class="bi bi-briefcase"></i>
+                            <div>
+                                <h4>Business Meetings</h4>
+                                <p>A peaceful atmosphere with free Wi-Fi and premium coffee.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card"> <i class="bi bi-cup-hot"></i>
+                            <div>
+                                <h4>Coffee Workshops</h4>
+                                <p>Hands-on coffee classes led by experienced baristas.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card"> <i class="bi bi-camera"></i>
+                            <div>
+                                <h4>Photo Friendly Space</h4>
+                                <p>Beautiful interiors that make every moment Instagram-worthy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="host-buttons"> <button class="book-btn" onclick="openRegister('Private Event Booking')">
+                            Book Your Event </button> </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="modal" id="registerModal">
+            <div class="modal-box">
+                <span class="close" onclick="closeRegister()">&times;</span>
+                <div class="modal-header">
+                    <h2>Workshop Registration</h2>
+                    <p>Provide valid details below to secure your placement.</p>
+                </div>
+
+                <form onsubmit="submitForm(event)">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" placeholder="John" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="emailAddress">Email Address <span class="required">*</span></label>
+                        <input type="email" id="emailAddress" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" placeholder="+95 9...">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="selectedEvent">Selected Program</label>
+                        <input type="text" id="selectedEvent" readonly>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="successModal">
+            <div class="modal-box success-box">
+                <i class="bi bi-check-circle-fill success-icon"></i>
+                <h2>Registration Successful!</h2>
+                <p>An automated confirmation invoice and schedule entry have been delivered to your email address.</p>
+                <button class="close-success-btn" onclick="closeSuccessModal()">Dismiss</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-box brand">
+                    <h2>Bean Boutique</h2>
+                    <span class="sub-brand">— COFFEE —</span>
+                    <p>Crafting exceptional coffee experiences and robust community ties daily.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-box links">
+                    <h3>QUICK LINKS</h3>
+                    <a href="index.html">&gt; Home</a>
+                    <a href="coffee.html">&gt; Our Coffee</a>
+                    <a href="Event.html">&gt; Events</a>
+                </div>
+
+                <div class="footer-box contact">
+                    <h3>CONTACT</h3>
+                    <p><i class="bi bi-envelope"></i> info@beancoffee.com</p>
+                    <p><i class="bi bi-telephone"></i> +95 123 456 789</p>
+                    <p><i class="bi bi-clock"></i> 8:00 AM - 9:00 PM</p>
+                </div>
+
+                <div class="footer-map-column">
+                    <h3><i class="bi bi-geo-alt-fill"></i> VISIT US:</h3>
+
+                    <p class="address-details">
+                        Mingalar Mandalay,<br>
+                        73rd Street, Mandalay, Myanmar
+                    </p>
+
+                    <div class="compact-map-box">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.4026728571282!2d96.09238749999996!3d21.94203345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d66c3ab9601%3A0xb6670a540e325a17!2sMingalar%20Mandalay%2C%2073rd%20St%2C%20Mandalay!5e0!3m2!1sen!2smm!4v1783263480122!5m2!1sen!2smm"
+                            loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/c1F3dcm4ns4K31Gj8" target="_blank" rel="noopener noreferrer"
+                        class="maps-link-btn">
+                        Open in Google Maps
+                        <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="footer-subscribe">
+                    <div class="subscribe-text">
+                        <div class="coffee-image">
+                            <img src="Feimage/offer/cup.png" alt="">
+                        </div>
+                        <div class="scribe-text">
+                            <h2>Never Miss a Deal</h2>
+                            <p>Subscribe to get the latest offers and news delivered to your inbox.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider-line">
+                    <i class="bi bi-cup-hot-fill divider-coffee-icon"></i>
+                </div>
+                <p>&copy; 2026 Bean Boutique Coffee Shop. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>

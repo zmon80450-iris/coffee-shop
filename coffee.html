@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Feimage/logo.png" alt="Bean Boutique Logo">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Our Coffee</a></li>
+                <li><a href="equipment.html"> Equipment</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="offer.html">Special Offers</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="menu" id="mobileMenu">
+                    <i class="bi bi-list" onclick="toggleMenu()"></i>
+                </div>
+                <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="order-btn">ORDER ONLINE</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="selection">
+        <div class="overlay"></div>
+        <div class="sele-content">
+            <H1>Handpicked & Crafted</H1>
+
+            <h2>COFFEE SELECTION</h2>
+
+            <p>
+                Explore our unique blends and single-origin coffees,
+                crafted to deliver exceptional flavor in every cup.
+            </p>
+        </div>
+
+    </section>
+
+    <div class="search-bar">
+        <i class="bi bi-search"></i>
+        <input type="text" id="searchInput" placeholder="Search coffee by name, origin, or flavor...">
+    </div>
+
+    <!-- FILTER -->
+    <div class="filters">
+        <button type="button" class="control-btn active" data-filter="all">All Products</button>
+        <button type="button" class="control-btn" data-filter="blend">Blend</button>
+        <button type="button" class="control-btn" data-filter="single-original">Single Origin</button>
+        <button type="button" class="control-btn" data-filter="cake">Cake</button>
+        <button type="button" class="control-btn" data-filter="drink-item">Coffee</button>
+    </div>
+
+
+    <div class="powder"> Coffee Powder Item</div>
+
+    <!-- GRID -->
+    <section class="sele-container">
+        <div class="sele-grid">
+            <div class="coffee-card mix single-original" data-name="single-original">
+                <div class="image-box">
+                    <img src="Feimage/powder/ethiopia.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">Single Origin</span>
+                    <h3 class="item">Ethiopian Yirgacheffe</h3>
+                    <p class="desc">Bright and aromatic coffee with floral notes and refreshing citrus flavors.</p>
+                    <div class="note-title">Tasting Notes:Citrus, Jasmine, Honey</div>
+                    <span class="price">Price: $7</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/filter.png" alt="Filter coffee">
+                        <img src="Feimage/brew/aero.png" alt="AeroPress coffee">
+                        <img src="Feimage/brew/pot.png" alt="Coffee pot brewing">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix single-original" data-name="single-original">
+                <div class="image-box">
+                    <img src="Feimage/powder/arabica.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">Single Origin</span>
+                    <h3 class="item">Arabica</h3>
+                    <p class="desc">The world's most popular coffee, loved for its smooth body, refined flavors, and
+                        pleasant acidity.</p>
+                    <div class="note-title">Tasting Notes:Sweet, Floral, Berry, Citrus</div>
+                    <span class="price">Price: $9</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/filter.png" alt="Filter coffee">
+                        <img src="Feimage/brew/press.png" alt="French press coffee">
+                        <img src="Feimage/brew/pot.png" alt="Coffee pot brewing">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix blend" data-name="blend">
+                <div class="image-box">
+                    <img src="Feimage/powder/expresso.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">Blend</span>
+                    <h3 class="item">Expresso Roast</h3>
+                    <p class="desc">Bold and intense roast designed for rich espresso shots.</p>
+                    <div class="note-title">Tasting Notes:Dark Chocolate, Cocoa</div>
+                    <span class="price">Price: $8</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/manchine.png" alt="Espresso machine">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix single-original" data-name="single-original">
+                <div class="image-box">
+                    <img src="Feimage/powder/colombian.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">Single Origin</span>
+                    <h3 class="item">Colombian Supremo</h3>
+                    <p class="desc">Medium-bodied coffee with caramel sweetness and nutty finish.</p>
+                    <div class="note-title">Tasting Notes:Caramel, Almond, Cocoa</div>
+                    <span class="price">Price: $8.5</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/filter.png" alt="Filter coffee method">
+                        <img src="Feimage/brew/aero.png" alt="AeroPress coffee">
+                        <img src="Feimage/brew/pot.png" alt="Coffee pot brewing">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix single-original" data-name="single-original">
+                <div class="image-box">
+                    <img src="Feimage/powder/sumatra.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">Single Origin</span>
+                    <h3 class="item">Sumatra Mandheling</h3>
+                    <p class="desc">A deep, complex Indonesian coffee featuring an ultra-low acidity and a heavy, syrupy
+                        body.</p>
+                    <div class="note-title">Tasting Notes:Cedarwood, Spice, Dark Chocolate, Molasses</div>
+                    <span class="price">Price: $8.5</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/press.png" alt="French press coffee">
+                        <img src="Feimage/brew/aero.png" alt="AeroPress coffee">
+                        <img src="Feimage/brew/pot.png" alt="Coffee pot brewing">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix blend" data-name="blend">
+                <div class="image-box">
+                    <img src="Feimage/powder/house.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">House blend</span>
+                    <h3 class="item">House Blend</h3>
+                    <p class="desc">Smooth and balanced blend crafted for everyday coffee lovers.</p>
+                    <div class="note-title">Tasting Notes:Chocolate, Caramel, Nuts</div>
+                    <span class="price">Price: 9</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/manchine.png" alt="Espresso machine">
+                        <img src="Feimage/brew/aero.png" alt="AeroPress coffee">
+                        <img src="Feimage/brew/filter.png" alt="Filter coffee">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix blend single-original" data-name="single-original blend">
+                <div class="image-box">
+                    <img src="Feimage/powder/decaf.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">House blend/Single Origin</span>
+                    <h3 class="item">Decaf Coffee Powder</h3>
+                    <p class="desc">All the rich, premium coffee flavors you love, but with 97% of the caffeine gently
+                        removed.</p>
+                    <div class="note-title">Tasting Notes:Roasted Malt, Soft Caramel, Chocolate</div>
+                    <span class="price">Price: 9</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/manchine.png" alt="Espresso machine">
+                        <img src="Feimage/brew/aero.png" alt="AeroPress coffee">
+                        <img src="Feimage/brew/filter.png" alt="Filter coffee">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix single-original" data-name="single-original">
+                <div class="image-box">
+                    <img src="Feimage/powder/robusta.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <span class="tag">Single Origin</span>
+                    <h3 class="item">Robusta</h3>
+                    <p class="desc">A bold and powerful coffee with a thick crema, packing twice the caffeine for an
+                        intense energy boost.</p>
+                    <div class="note-title">Tasting Notes:Dark Chocolate, Nutty, Earthy, Woody</div>
+                    <span class="price">Price: 9</span>
+                    <p class="brew-title">Best Brew:</p>
+                    <div class="brew-icons">
+                        <img src="Feimage/brew/manchine.png" alt="Espresso machine">
+                        <img src="Feimage/brew/aero.png" alt="AeroPress coffee">
+                        <img src="Feimage/brew/filter.png" alt="Filter coffee">
+                    </div>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="see-more-wrapper">
+        <button class="see-more-btn">
+            See More <i class="bi bi-chevron-down arrowIcon"></i>
+        </button>
+    </div>
+
+    <div class="powder"> Coffee Item</div>
+
+    <section class="sele-container">
+        <div class="sele-grid">
+            <div class="coffee-card mix drink-item" data-name="drink-item">
+                <div class="image-box">
+                    <img src="Feimage/coffee/cap.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Cappuccino</h3>
+                    <p class="desc">Classic Italian coffee with espresso and milk foam</p>
+                    <span class="price">$5.99</span>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix drink-item" data-name="drink-item">
+                <div class="image-box">
+                    <img src="Feimage/coffee/latte.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Coffee Latte</h3>
+                    <p class="desc">Silky espresso mixed with steamed milk.</p>
+                    <span class="price">$6.49</span>
+                    <button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix drink-item" data-name="drink-item">
+                <div class="image-box">
+                    <img src="Feimage/coffee/mocha.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Caramel Bliss Latte</h3>
+                    <p class="desc">Espresso blended with chocolate and creamy milk.</p>
+                    <span class="price">$6.50(Promo Price: $4.85 after 25% OFF)</span>
+                    <br><button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix drink-item" data-name="drink-item">
+                <div class="image-box">
+                    <img src="Feimage/coffee/aa.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Iced Americano</h3>
+                    <p class="desc">Refreshing chilled espresso with water and ice.</p>
+                    <span class="price">$4.99</span>
+                    <br><button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix drink-item" data-name="drink-item">
+                <div class="image-box">
+                    <img src="Feimage/coffee/macha.jpg" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Authentic Uji Matcha Latte</h3>
+                    <p class="desc">Premium ceremonial-grade Japanese matcha whisked with velvety steamed milk.</p>
+                    <span class="price">$5.50</span>
+                    <br><button class="add_cart">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="see-more-wrapper">
+        <button class="see-more-btn">
+            See More <i class="bi bi-chevron-down" id="arrowIcon"></i>
+        </button>
+    </div>
+
+    <div class="powder"> Cake Item</div>
+
+    <section class="sele-container">
+        <div class="sele-grid">
+            <div class="coffee-card mix cake" data-name="cake">
+                <div class="image-box">
+                    <img src="Feimage/cake/tira.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Tiramisu Cake</h3>
+                    <p class="desc">Italian dessert layered with coffee-soaked sponge.</p>
+                    <span class="price">$7.99</span>
+                    <br><button class="add_cart">+</button>
+                </div>
+            </div>
+
+            <div class="coffee-card mix cake" data-name="cake">
+                <div class="image-box">
+                    <img src="Feimage/cake/cheese.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Classic Cheesecake</h3>
+                    <p class="desc">Creamy cheesecake with buttery biscuit base.</p>
+                    <span class="price">$6.99</span>
+                    <br><button class="add_cart">+</button>
+                </div>
+            </div>
+
+
+            <div class="coffee-card mix cake" data-name="cake">
+                <div class="image-box">
+                    <img src="Feimage/cake/croissant.jpg" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Butter Croissant</h3>
+                    <p class="desc">Classic French pastry layered with premium butter.</p>
+                    <span class="price">$3.50(Combo Price with Coffee: $4.99)</span>
+                    <br><button class="add_cart">+</button>
+                </div>
+            </div>
+
+
+            <div class="coffee-card mix cake" data-name="cake">
+                <div class="image-box">
+                    <img src="Feimage/cake/red.png" alt="Coffee">
+                    <button class="wish-btn"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="card-body">
+                    <h3 class="item">Red Velvet Cake</h3>
+                    <p class="desc">Soft velvet sponge with cream cheese frosting.</p>
+                    <span class="price">$7.49</span>
+                    <br><button class="add_cart">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="see-more-wrapper">
+        <button id="seeMoreBtn" class="see-more-btn">
+            See More <i class="bi bi-chevron-down arrowIcon"></i>
+        </button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box brand">
+                <h2>Bean Boutique</h2>
+                <span class="sub-brand">— COFFEE —</span>
+                <p>Great coffee, great moments. Join our community and enjoy special coffee experiences.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                    <a href="#"><i class="bi bi-envelope-heart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box links">
+                <h3>QUICK LINKS</h3>
+                <a href="#">&gt;Home</a>
+                <a href="#">&gt;Menu</a>
+                <a href="#">&gt;Events</a>
+                <a href="#">&gt;Our Story</a>
+            </div>
+
+            <div class="footer-box contact">
+                <h3>CONTACT</h3>
+                <p><i class="bi bi-envelope"></i> info@beancoffee.com</p>
+                <p><i class="bi bi-telephone"></i> +95 123 456 789</p>
+                <p><i class="bi bi-clock"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+            </div>
+
+            <div class="footer-map-column">
+                <h3><i class="bi bi-geo-alt-fill"></i> VISIT US:</h3>
+
+                <p class="address-details">
+                    Mingalar Mandalay,<br>
+                    73rd Street, Mandalay, Myanmar
+                </p>
+
+                <div class="compact-map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.4026728571282!2d96.09238749999996!3d21.94203345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d66c3ab9601%3A0xb6670a540e325a17!2sMingalar%20Mandalay%2C%2073rd%20St%2C%20Mandalay!5e0!3m2!1sen!2smm!4v1783263480122!5m2!1sen!2smm"
+                        loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+
+                <a href="https://maps.app.goo.gl/c1F3dcm4ns4K31Gj8" target="_blank" rel="noopener noreferrer"
+                    class="maps-link-btn">
+                    Open in Google Maps
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="footer-subscribe">
+                <div class="subscribe-text">
+                    <div class="coffee-image">
+                        <img src="Feimage/offer/cup.png" alt="">
+                    </div>
+                    <div class="scribe-text">
+                        <h2>Never Miss a Deal</h2>
+                        <p>Subscribe to get the latest offers and news delivered to your inbox.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-divider-line">
+                <i class="bi bi-cup-hot-fill divider-coffee-icon"></i>
+            </div>
+            <p>© 2026 Bean Boutique Coffee. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

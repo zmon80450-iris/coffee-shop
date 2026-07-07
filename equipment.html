@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Feimage/logo.png" alt="Bean Boutique Logo">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Our Coffee</a></li>
+                <li><a href="equipment.html"> Equipment</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="offer.html">Special Offers</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="menu" id="mobileMenu">
+                    <i class="bi bi-list" onclick="toggleMenu()"></i>
+                </div>
+                <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="order-btn">ORDER ONLINE</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="equ-header">
+        <div class="e-header">
+            <span class="sub-title">CRAFTED FOR PRECISION</span>
+            <h1>BREWING EQUIPMENT</h1>
+            <p class="intro-text">Explore our curated selection of professional-grade brewing tools, engineered to
+                extract
+                the perfect flavor profile from every bean.</p>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <main class="equipment-container">
+        <section class="equipment-card">
+            <img src="Feimage/equ/expreso.png" alt="Coffee">
+            <button class="wish-btn">♡</button>
+            <div class="equipment-details">
+                <span class="category">Commercial Grade</span>
+                <h2 class="Title">Pro-Extraction Espresso Machine</h2>
+                <div class="eprice">$1,200.00</div>
+                <p class="description">Features a high-pressure 15-bar pump and PID temperature control to ensure
+                    optimal thermal stability and flawless shot extraction every single time.</p>
+
+                <div class="usage-tips">
+                    <h3>💡 Usage Tip:</h3>
+                    <p>Preheat your portafilter and cups before pulling a shot. Aim for a 1:2 brew ratio (e.g., 18g
+                        coffee in, 36g espresso out) within 25-30 seconds.</p>
+                </div>
+                <button class="action-btn">Add To Cart</button>
+            </div>
+        </section>
+
+        <section class="equipment-card">
+            <img src="Feimage/equ/press.png" alt="Coffee">
+            <button class="wish-btn">♡</button>
+            <div class="equipment-details">
+                <span class="category">Classic Immersion</span>
+                <h2 class="Title">Premium Borosilicate French Press</h2>
+                <div class="eprice">$1,200</div>
+                <p class="description">Crafted with heat-resistant borosilicate glass and a dual-layer stainless
+                    steel mesh filter that plunges smoothly while locking in essential oils.</p>
+
+                <div class="usage-tips">
+                    <h3>💡 Usage Tip:</h3>
+                    <p>Use a coarse grind to avoid sediment. Let the coffee steep in hot water (93°C) for exactly 4
+                        minutes, stir gently, then plunge slowly with consistent pressure.</p>
+                </div>
+                <button class="action-btn">Add To Cart</button>
+            </div>
+        </section>
+
+        <section class="equipment-card">
+            <img src="Feimage/equ/dropper.png" alt="Coffee">
+            <button class="wish-btn">♡</button>
+            <div class="equipment-details">
+                <span class="category">Manual Brew</span>
+                <h2 class="Title">Ceramic Pour-Over V60 Dripper</h2>
+                <div class="eprice">$1,200</div>
+                <p class="description">Designed with internal spiral ribs and a 60-degree angled cone that allows water
+                    to flow optimally through the coffee bed for an incredibly clean, nuanced cup.</p>
+
+                <div class="usage-tips">
+                    <h3>💡 Usage Tip:</h3>
+                    <p>Use a medium-fine grind (like sea salt) and pour hot water (92°C) in slow, concentric circles.
+                        Rinse your paper filter with hot water first to remove any papery taste.</p>
+                </div>
+                <button class="action-btn">Add To Cart</button>
+            </div>
+        </section>
+
+        <section class="equipment-card">
+            <img src="Feimage/equ/grinder.png" alt="Coffee">
+            <button class="wish-btn">♡</button>
+            <div class="equipment-details">
+                <span class="category">Precision Grinding</span>
+                <h2 class="Title">Precision Conical Burr Grinder</h2>
+                <div class="eprice">$1,200</div>
+                <p class="description">Equipped with 40mm stainless steel conical burrs and 30 unique grind settings.
+                    Delivers an exceptionally uniform grind size from coarse French press to fine espresso.</p>
+
+                <div class="usage-tips">
+                    <h3>💡 Usage Tip:</h3>
+                    <p>Only grind what you need immediately before brewing. Keep the bean hopper clean and dry, and
+                        brush out residual coffee particles once a week to maintain freshness.</p>
+                </div>
+                <button class="action-btn">Add To Cart</button>
+            </div>
+        </section>
+
+        <section class="equipment-card">
+            <img src="Feimage/equ/pot.png" alt="Coffee">
+            <button class="wish-btn">♡</button>
+            <div class="equipment-details">
+                <span class="category">Stovetop Espresso</span>
+                <h2 class="Title">Classic Aluminum Moka Pot</h2>
+                <div class="eprice">$1,200</div>
+                <p class="description">The legendary Italian stovetop brewer that uses steam pressure to push boiling
+                    water up through finely ground coffee, yielding a rich, velvety, espresso-like concentrate.</p>
+
+                <div class="usage-tips">
+                    <h3>💡 Usage Tip:</h3>
+                    <p>Fill the base with pre-heated hot water to avoid cooking the coffee grounds on the stove. Remove
+                        the pot from heat as soon as it begins to gurgle to prevent a bitter, burnt taste.</p>
+                </div>
+                <button class="action-btn">Add To Cart</button>
+            </div>
+        </section>
+
+        <section class="equipment-card">
+            <img src="Feimage/equ/kittle.png" alt="Coffee">
+            <button class="wish-btn">♡</button>
+            <div class="equipment-details">
+                <span class="category">Pouring Precision</span>
+                <h2 class="Title">Variable Temperature Gooseneck Kettle</h2>
+                <div class="eprice">$1,200</div>
+                <p class="description">Features a counterbalanced handle and an elongated gooseneck spout for absolute
+                    flow control. Offers degree-by-degree temperature settings to unlock precise extractions.</p>
+
+                <div class="usage-tips">
+                    <h3>💡 Usage Tip:</h3>
+                    <p>Set the kettle to 93°C for medium roasts and 95°C for light roasts. Use a steady, slow pour to
+                        keep the coffee bed saturated evenly without disturbing the grounds too aggressively.</p>
+                </div>
+                <button class="action-btn">Add To Cart</button>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box brand">
+                <h2>Bean Boutique</h2>
+                <span class="sub-brand">— COFFEE —</span>
+                <p>Great coffee, great moments. Join our community and enjoy special coffee experiences.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                    <a href="#"><i class="bi bi-envelope-heart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box links">
+                <h3>QUICK LINKS</h3>
+                <a href="#">&gt;Home</a>
+                <a href="#">&gt;Menu</a>
+                <a href="#">&gt;Events</a>
+                <a href="#">&gt;Our Story</a>
+            </div>
+
+            <div class="footer-box contact">
+                <h3>CONTACT</h3>
+                <p><i class="bi bi-envelope"></i> info@beancoffee.com</p>
+                <p><i class="bi bi-telephone"></i> +95 123 456 789</p>
+                <p><i class="bi bi-clock"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+            </div>
+
+            <div class="footer-map-column">
+                <h3><i class="bi bi-geo-alt-fill"></i> VISIT US:</h3>
+
+                <p class="address-details">
+                    Mingalar Mandalay,<br>
+                    73rd Street, Mandalay, Myanmar
+                </p>
+
+                <div class="compact-map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.4026728571282!2d96.09238749999996!3d21.94203345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d66c3ab9601%3A0xb6670a540e325a17!2sMingalar%20Mandalay%2C%2073rd%20St%2C%20Mandalay!5e0!3m2!1sen!2smm!4v1783263480122!5m2!1sen!2smm"
+                        loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+
+                <a href="https://maps.app.goo.gl/c1F3dcm4ns4K31Gj8" target="_blank" rel="noopener noreferrer"
+                    class="maps-link-btn">
+                    Open in Google Maps
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="footer-subscribe">
+                <div class="subscribe-text">
+                    <div class="coffee-image">
+                        <img src="Feimage/offer/cup.png" alt="">
+                    </div>
+                    <div class="scribe-text">
+                        <h2>Never Miss a Deal</h2>
+                        <p>Subscribe to get the latest offers and news delivered to your inbox.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-divider-line">
+                <i class="bi bi-cup-hot-fill divider-coffee-icon"></i>
+            </div>
+            <p>© 2026 Bean Boutique Coffee. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
