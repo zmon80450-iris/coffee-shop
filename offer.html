@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Feimage/logo.png" alt="Bean Boutique Logo">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Our Coffee</a></li>
+                <li><a href="equipment.html"> Equipment</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="offer.html">Special Offers</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="menu" id="mobileMenu">
+                    <i class="bi bi-list" onclick=" toggleMenu()"></i>
+                </div>
+                <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
+                <a href="#" class="order-btn">ORDER ONLINE</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="offer-section">
+
+        <div class="offer-header">
+
+            <span>Special Offers</span>
+
+            <h1>
+                Save More On<br>
+                Your Favorite Coffee
+            </h1>
+
+            <p>
+                Enjoy seasonal promotions, exclusive
+                coffee deals and special rewards
+                made for coffee lovers.
+            </p>
+
+            <button>
+                Explore Offers →
+            </button>
+
+        </div>
+
+
+        <div class="offer-card large-offer">
+
+            <img src="Feimage/offer/blend.png" alt="House Blend Coffee">
+
+            <div class="offer-content">
+
+                <small>Limited Offer</small>
+
+                <h2>
+                    House Blend
+                </h2>
+
+                <h3>
+                    15% OFF
+                </h3>
+
+                <a href="coffee.html">
+                    Shop Now →
+                </a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="Feimage/offer/bag.png" alt="Coffee Bag">
+
+            <div class="offer-content">
+                <small>Special Deal</small>
+                <h2>Buy 2 Coffee Bags</h2>
+
+                <h3>Get 1 Free</h3>
+                <a href="coffee.html">Shop Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-of">
+
+        <h2>Today's Best Offers</h2>
+
+        <div class="ofpart">
+
+            <div class="ofdis">
+                <div class="discount-card">
+                    <i class="bi bi-brightness-high-fill"></i>
+                    <h3>Morning Brew</h3>
+                    <p>8AM - 11AM</p>
+                    <span>20% OFF</span>
+
+                </div>
+
+                <div class="discount-card">
+                    <i class="bi bi-cake"></i>
+                    <h3>Coffee Bundle</h3>
+                    <span>Buy 2</span>
+                    <small>Get 1 Free</small>
+                </div>
+
+                <div class="discount-card">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    <h3>Member Discount</h3>
+                    <span>10% OFF</span>
+                </div>
+
+                <div class="discount-card">
+                    <i class="bi bi-people-fill"></i>
+                    <h3>Free Delivery</h3>
+                    <p>Orders Over</p>
+                    <span>$40</span>
+                </div>
+            </div>
+
+            <div class="latte">
+                <div class="lat-content">
+                    <p class="limited">Limited Time</p>
+                    <h3>Caramel Bliss Latte</h3>
+                    <p>
+                        Rich espresso blended with
+                        smooth caramel and fresh milk.
+                    </p>
+                    <button>Try Now</button>
+                </div>
+
+                <img src="Feimage/offer/cremmy.png" alt="Latte">
+                <div class="discount">25% OFF</div>
+            </div>
+
+        </div>
+    </section>
+    <section class="rewards-section">
+
+        <div class="rewards-card">
+
+            <div class="reward-left">
+                <h2>Brew More,<br>Earn More</h2>
+
+                <p>
+                    Collect reward points every time you purchase coffee,
+                    unlock exclusive member discounts, and enjoy free drinks.
+                </p>
+
+                <button>Join Rewards</button>
+            </div>
+
+            <div class="reward-divider"></div>
+
+            <div class="reward-item">
+                <i class="bi bi-coin"></i>
+                <h3>1 Point</h3>
+                <p>Per $1 Spent</p>
+            </div>
+
+            <div class="reward-item">
+                <i class="bi bi-cup-hot"></i>
+                <h3>50 Points</h3>
+                <p>Free Drink</p>
+            </div>
+
+            <div class="reward-item">
+                <i class="bi bi-gift-fill"></i>
+                <h3>Birthday</h3>
+                <p>Reward</p>
+            </div>
+
+            <div class="reward-item">
+                <i class="bi bi-tag"></i>
+                <h3>Exclusive</h3>
+                <p>Member Deals</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscription-section">
+        <h2 class="section-title">Coffee Subscription Plans</h2>
+        <p class="section-subtitle">
+            Fresh coffee delivered to your door every month.
+            Choose the plan that suits your lifestyle.
+        </p>
+
+        <div class="subscription-grid">
+
+            <div class="plan-card">
+                <h3>Starter Plan</h3>
+
+                <h2>$19<span>/Month</span></h2>
+
+                <ul>
+                    <li>✔ 2 Coffee Bags</li>
+                    <li>✔ Fresh Roasted Coffee</li>
+                    <li>✔ Monthly Delivery</li>
+                    <li>✔ 5% Member Discount</li>
+                </ul>
+
+                <a href="#" class="plan-btn">Subscribe</a>
+            </div>
+
+            <div class="plan-card featured">
+                <span class="popular">Most Popular</span>
+                <h3>Premium Plan</h3>
+                <h2>$39<span>/Month</span></h2>
+                <ul>
+                    <li>✔ 4 Coffee Bags</li>
+                    <li>✔ Free Delivery</li>
+                    <li>✔ Exclusive Seasonal Coffee</li>
+                    <li>✔ 10% Member Discount</li>
+                </ul>
+                <a href="#" class="plan-btn">Subscribe</a>
+            </div>
+
+            <div class="plan-card">
+                <h3>Bean Lover Plan</h3>
+                <h2>$59<span>/Month</span></h2>
+                <ul>
+                    <li>✔ 6 Coffee Bags</li>
+                    <li>✔ Free Delivery</li>
+                    <li>✔ Early Access to New Blends</li>
+                    <li>✔ Free Coffee Gift Every Month</li>
+                </ul>
+                <a href="#" class="plan-btn">Subscribe</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscription-benefits">
+
+        <h2 class="section-title">Why Subscribe?</h2>
+
+        <div class="benefit-grid">
+
+            <div class="benefit-card">
+                <i class="bi bi-truck"></i>
+                <h3>Free Delivery</h3>
+                <p>Receive fresh coffee at your doorstep every month.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="bi bi-cup-hot-fill"></i>
+                <h3>Premium Coffee</h3>
+                <p>Enjoy carefully selected blends and single-origin coffees.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="bi bi-percent"></i>
+                <h3>Exclusive Discounts</h3>
+                <p>Subscribers receive special member-only offers.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="bi bi-stars"></i>
+                <h3>Early Access</h3>
+                <p>Be the first to try our newest coffee collections.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box brand">
+                <h2>Bean Boutique</h2>
+                <span class="sub-brand">— COFFEE —</span>
+                <p>Great coffee, great moments. Join our community and enjoy special coffee experiences.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                    <a href="#"><i class="bi bi-envelope-heart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box links">
+                <h3>QUICK LINKS</h3>
+                <a href="#">&gt;Home</a>
+                <a href="#">&gt;Menu</a>
+                <a href="#">&gt;Events</a>
+                <a href="#">&gt;Our Story</a>
+            </div>
+
+            <div class="footer-box contact">
+                <h3>CONTACT</h3>
+                <p><i class="bi bi-envelope"></i> info@beancoffee.com</p>
+                <p><i class="bi bi-telephone"></i> +95 123 456 789</p>
+                <p><i class="bi bi-clock"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+            </div>
+
+            <div class="footer-map-column">
+                <h3><i class="bi bi-geo-alt-fill"></i> VISIT US:</h3>
+
+                <p class="address-details">
+                    Mingalar Mandalay,<br>
+                    73rd Street, Mandalay, Myanmar
+                </p>
+
+                <div class="compact-map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.4026728571282!2d96.09238749999996!3d21.94203345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d66c3ab9601%3A0xb6670a540e325a17!2sMingalar%20Mandalay%2C%2073rd%20St%2C%20Mandalay!5e0!3m2!1sen!2smm!4v1783263480122!5m2!1sen!2smm"
+                        loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+
+                <a href="https://maps.app.goo.gl/c1F3dcm4ns4K31Gj8" target="_blank" rel="noopener noreferrer"
+                    class="maps-link-btn">
+                    Open in Google Maps
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="footer-subscribe">
+                <div class="subscribe-text">
+                    <div class="coffee-image">
+                        <img src="Feimage/offer/cup.png" alt="">
+                    </div>
+                    <div class="scribe-text">
+                        <h2>Never Miss a Deal</h2>
+                        <p>Subscribe to get the latest offers and news delivered to your inbox.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-divider-line">
+                <i class="bi bi-cup-hot-fill divider-coffee-icon"></i>
+            </div>
+            <p>© 2026 Bean Boutique Coffee. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
